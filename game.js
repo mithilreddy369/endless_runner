@@ -18,6 +18,9 @@ let player = {
 
 let obstacles = [];
 const obstacleSpeed = 10;
+// Variable to track live score
+// Variable to track live score
+// Variable to track live score
 
 let liveScore = 0; // Variable to track live score
 
