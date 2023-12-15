@@ -13,11 +13,11 @@ let player = {
     width: 30,
     height: 30,
     color: '#0095DD',
-    speed: 2
+    speed: 10
 };
 
 let obstacles = [];
-const obstacleSpeed = 2;
+const obstacleSpeed = 10;
 
 let liveScore = 0; // Variable to track live score
 
