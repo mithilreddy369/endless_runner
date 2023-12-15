@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #2c3e50; /* Background color for the game */
+    font-family: 'Arial', sans-serif;
+}
+
+#game-container {
+    position: relative;
+    transition: opacity 1s ease-in-out; /* Add a transition for opacity */
+    opacity: 1; /* Set initial opacity to 1 */
+}
+
+.fade-out {
+    opacity: 0; /* Set opacity to 0 for fade-out effect */
+}
+
+.fade-in {
+    opacity: 1; /* Set opacity to 1 for fade-in effect */
+}
+
+
+canvas {
+    display: block;
+}
+
+#live-score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding-left: 5px;
+    font-size: 20px;
+    color: #ecf0f1;
+}
+
+#stats {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for stats */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle lift */
+    font-size: 24px; /* Increased font size */
+    color: #2c3e50; /* Updated text color for better visibility */
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+th, td {
+    padding: 10px;
+}
+
+th {
+    background-color: #3498db;
+    color: #ecf0f1;
+}
+
+#gameCanvas {
+    border: 5px solid #27ae60; /* Border for the game canvas */
+    border-radius: 10px;
+}
+
+/* Styling for obstacles */
+#gameCanvas + div {
+    position: absolute;
+    width: 170px;
+    height: 25px;
+    background-color: #e74c3c;
+    border-radius: 2%;
+}
+
+/* Animation for obstacles */
+@keyframes obstacleAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#gameCanvas + div {
+    animation: obstacleAnimation 1s infinite;
+}
