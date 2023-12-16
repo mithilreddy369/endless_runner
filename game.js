@@ -1,7 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Set the default zoom level to 150%
-    document.body.style.zoom = "100%";
-});
+
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 const stats = {
@@ -13,9 +10,9 @@ const stats = {
 
 let player = {
     x: 50,
-    y: canvas.height - 30,
-    width: 30,
-    height: 30,
+    y: canvas.height - 0,
+    width: 40,
+    height: 40,
     color: '#0095DD',
     speed: 2
 };
@@ -117,8 +114,8 @@ function startNewGame() {
         obstacles.push({
             x: Math.random() * (canvas.width - 20),
             y: Math.random() * -canvas.height, // Reset y-coordinate to a position above the canvas
-            width: 20,
-            height: 20
+            width: 35,
+            height: 35
         });
     }
 

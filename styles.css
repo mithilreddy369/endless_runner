@@ -26,27 +26,31 @@ body {
 
 canvas {
     display: block;
+
 }
 
 #live-score {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    padding-left: 5px;
-    font-size: 20px;
+    top: 50px;
+    left: 50px;
+    padding-left: 10px;
+    font-size: 25px;
     color: #ecf0f1;
+    
 }
 
 #stats {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 50px;
+    right: 50px;
     background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for stats */
-    padding: 10px;
+    padding: 1px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle lift */
-    font-size: 24px; /* Increased font size */
+    font-size: 48px; /* Increased font size */
     color: #2c3e50; /* Updated text color for better visibility */
+    font-weight: bold; /* Use bold font */
+    font-style: italic; /* Use italic style (you can adjust this to your preference) */
 }
 
 table {
@@ -69,8 +73,9 @@ th {
 }
 
 #gameCanvas {
-    
     position: relative;
+    transition: transform 0.5s ease-in-out;
+
 }
 
 
@@ -78,10 +83,15 @@ th {
 /* Styling for obstacles */
 #gameCanvas + div {
     position: absolute;
-    width: 170px;
-    height: 25px;
+    width: 440px;
+    height: 50px;
     background-color: #e74c3c;
-    border-radius: 2%;
+    padding-bottom: 2px;
+    border-radius: 5px;
+    color: #ecf0f1;
+    font-size: 48px; /* Increased font size */
+    font-weight: bold; /* Use bold font */
+    font-style: italic; /* Use italic style (you can adjust this to your preference) */
 }
 
 @keyframes obstacleAnimation {
