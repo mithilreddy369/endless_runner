@@ -100,7 +100,7 @@ function endGame() {
 
     // Reset player and obstacles
     player.x = canvas.width / 2 - player.width / 2;
-    player.y = canvas.height - 50;
+    player.y = canvas.height - 100;
     liveScore = 0; // Reset live score
 
     // Trigger a new game immediately
