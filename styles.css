@@ -63,10 +63,17 @@ th {
     color: #ecf0f1;
 }
 
+
 #gameCanvas {
-    border: 5px solid #27ae60; /* Border for the game canvas */
     border-radius: 10px;
 }
+
+#gameCanvas {
+    
+    position: relative;
+}
+
+
 
 /* Styling for obstacles */
 #gameCanvas + div {
@@ -77,18 +84,16 @@ th {
     border-radius: 2%;
 }
 
-/* Animation for obstacles */
 @keyframes obstacleAnimation {
-    0% {
+    0%, 100% {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(10px);
-    }
-    100% {
-        transform: translateY(0);
+        transform: translateY(15px);
     }
 }
+
+
 
 #gameCanvas + div {
     animation: obstacleAnimation 1s infinite;

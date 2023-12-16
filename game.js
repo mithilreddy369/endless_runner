@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function() {
+    // Set the default zoom level to 150%
+    document.body.style.zoom = "100%";
+});
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 const stats = {
@@ -13,11 +17,11 @@ let player = {
     width: 30,
     height: 30,
     color: '#0095DD',
-    speed: 10
+    speed: 2
 };
 
 let obstacles = [];
-const obstacleSpeed = 10;
+const obstacleSpeed = 2;
 // Variable to track live score
 // Variable to track live score
 // Variable to track live score
@@ -109,7 +113,7 @@ function endGame() {
 function startNewGame() {
     // Create initial obstacles
     obstacles = [];
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < 5; i++) {
         obstacles.push({
             x: Math.random() * (canvas.width - 20),
             y: Math.random() * -canvas.height, // Reset y-coordinate to a position above the canvas
@@ -143,6 +147,7 @@ function gameLoop() {
 
     // Continue the game loop
     requestAnimationFrame(gameLoop);
+    
 }
 
 // Resize canvas when the window is resized
