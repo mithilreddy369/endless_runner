@@ -8,7 +8,7 @@ body {
     font-family: 'Arial', sans-serif;
 
     background: linear-gradient(45deg, #1a1a1a, #333333, #1a1a1a);
-    animation: gradientAnimation 10s infinite alternate;
+    /*animation: gradientAnimation 10s infinite alternate;*/
 }
 
 #game-container {
@@ -53,7 +53,9 @@ canvas {
     color: #2c3e50; /* Updated text color for better visibility */
     font-weight: bold; /* Use bold font */
     font-style: italic; /* Use italic style (you can adjust this to your preference) */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Darker shadow for better visibility */
 }
+
 
 table {
     width: 100%;
@@ -87,7 +89,10 @@ th {
     position: absolute;
     width: 440px;
     height: 50px;
-    background-color: #c0392b; /* Green background color */
+    background-color: #8b0000; /* Dark red background color */
+    outline: 8px solid #8b0000; /* Add a dark red outline to create thickness */
+    outline-offset: -8px; /* Adjust the offset to control the thickness */
+
     padding-bottom: 2px;
     border-radius: 5px;
     color: #fff; /* White text color */
